@@ -1,92 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccesoActivity"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@color/azul">
+    android:background="@color/azul"
+    tools:context=".AccesoActivity">
 
-    <ScrollView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="match_parent"
+        android:background="@color/blanco"
+        android:layout_below="@+id/cvLogin"
+        android:layout_marginTop="-150dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECEFF3"
+        android:layout_below="@+id/cvLogin"
+        android:layout_marginTop="-150dp" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/isotipo"
+        android:tint="@color/naranja"
+        android:padding="25dp"
+        android:scaleType="centerInside"
+        android:layout_gravity="center"
+        android:layout_above="@id/cvLogin"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="@color/blanco"
+        app:cardCornerRadius="15dp" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:gravity="center" >
-
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:src="@drawable/logo_vertical"
-                android:scaleType="centerCrop" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="70dp"
-                android:layout_marginEnd="70dp"
-                app:cardBackgroundColor="@color/blanco"
-                app:cardCornerRadius="15dp" >
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColorHint="@color/naranja"
-                    android:layout_marginTop="5dp" >
-
-                    <EditText
-                        android:id="@+id/etDni"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="DNI"
-                        android:background="@null"
-                        android:textColor="@color/azul"
-                        android:inputType="number"
-                        android:maxLength="8"
-                        android:textSize="18sp"
-                        android:textAlignment="center"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginBottom="12dp" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <Button
-                android:id="@+id/btnIngresar"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="Ingresar"
-                android:textAllCaps="false"
-                android:background="@drawable/boton_naranja"
-                android:textColor="@color/blanco"
-                android:textSize="15sp"
-                android:fontFamily="sans-serif-black"
-                android:layout_marginStart="100dp"
-                android:layout_marginEnd="100dp"
-                android:layout_marginTop="50dp" />
+            android:gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="35dp">
 
             <TextView
-                android:id="@+id/tvRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Bienvenido"
                 android:textAlignment="center"
-                android:textColor="@color/naranja"
-                android:text="Registrarme"
-                android:textSize="15sp"
-                android:fontFamily="sans-serif-light"
-                android:layout_marginTop="30dp" />
+                android:textColor="@color/azul"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="30sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/azul"
+                android:textAlignment="center"
+                android:layout_marginTop="15dp" >
+
+                <EditText
+                    android:id="@+id/etUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Usuario"
+                    android:textColor="@color/naranja"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="12dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/azul"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/etClave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contraseña"
+                    android:textColor="@color/naranja"
+                    android:inputType="textPassword"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="12dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.cardview.widget.CardView>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Ingresar"
+        android:textAllCaps="false"
+        android:background="@drawable/boton_naranja"
+        android:textColor="@color/blanco"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginHorizontal="120dp"
+        android:layout_marginTop="-20dp"
+        android:layout_below="@id/cvLogin" />
+
+    <TextView
+        android:id="@+id/tvRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/azul"
+        android:text="Registrarme"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/btnIngresar" />
+
+    <FrameLayout
+        android:id="@+id/flayCargando"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90303b47"
+        android:visibility="gone"
+        android:elevation="2dp" >
+
+        <ProgressBar
+            android:id="@+id/pbCargando"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/naranja" />
+
+    </FrameLayout>
+
+</RelativeLayout>

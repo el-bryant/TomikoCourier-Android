@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:cardBackgroundColor="@color/blanco"
+        app:cardCornerRadius="20dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="15dp" >
+
+            <TextView
+                android:id="@+id/tvidEnvio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="12"
+                android:layout_marginBottom="10dp" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:orientation="vertical"
+                    android:background="@drawable/contenedor_borde_naranja"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="10dp"
+                    android:layout_marginEnd="10dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="Solicitado:"
+                        android:textColor="@color/azul"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="13sp"
+                        android:layout_marginEnd="5dp" />
+
+                    <TextView
+                        android:id="@+id/tvFechaSolicitado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:text="yyyy-MM-dd"
+                        android:textColor="@color/blanco"
+                        android:fontFamily="sans-serif-light"
+                        android:textAlignment="textEnd"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:orientation="vertical"
+                    android:background="@drawable/contenedor_borde_naranja"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="10dp"
+                    android:layout_marginEnd="10dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="Entregado:"
+                        android:textColor="@color/blanco"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="13sp"
+                        android:layout_marginEnd="5dp" />
+
+                    <TextView
+                        android:id="@+id/tvFechaEntregado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:text="-"
+                        android:textColor="@color/blanco"
+                        android:fontFamily="sans-serif-light"
+                        android:textAlignment="textEnd"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="12"
+                android:layout_marginBottom="10dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Recogido:"
+                    android:textColor="@color/blanco"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="5dp" />
+
+                <TextView
+                    android:id="@+id/tvDireccionRecojo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"
+                    android:text="La dirección de recojo"
+                    android:textColor="@color/azul"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="12"
+                android:layout_marginBottom="10dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Entregado:"
+                    android:textColor="@color/naranja"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="5dp" />
+
+                <TextView
+                    android:id="@+id/tvDireccionEntrega"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"
+                    android:text="La dirección de entrega"
+                    android:textColor="@color/azul"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEstadoEnvio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Solicitado"
+                android:textColor="@color/azul"
+                android:fontFamily="sans-serif-black"
+                android:textSize="12sp"
+                android:textAlignment="textEnd"
+                android:layout_marginHorizontal="10dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

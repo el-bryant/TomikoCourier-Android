@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Tomiko Courier</string>
+    <string name="title_activity_ubicaciones">Map</string>
 </resources>

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SolicitarEnvioActivity"
+    android:background="@color/azul"
+    android:theme="@style/Material"
+    android:fitsSystemWindows="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ECEFF3">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:src="@drawable/imagotipo_horizontal"
+            android:scaleType="fitEnd"
+            android:tint="@color/naranja"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="20dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Solicitar nuevo envío"
+            android:textColor="@color/naranja"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="70dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="30dp" >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDireccionRecojo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:hint="Dirección de recojo"
+                    android:textColorHint="@color/azul"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:boxStrokeColor="@color/azul"
+                    app:boxStrokeWidth="1dp"
+                    app:boxCornerRadiusBottomEnd="20dp"
+                    app:boxCornerRadiusBottomStart="20dp"
+                    app:boxCornerRadiusTopEnd="20dp"
+                    app:boxCornerRadiusTopStart="20dp"
+                    app:hintTextColor="@color/azul"
+                    app:helperText=" "
+                    app:startIconDrawable="@drawable/ic_location"
+                    app:startIconTint="@color/azul"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietDireccionRecojo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPostalAddress"
+                        android:textColor="@color/azul"
+                        android:textCursorDrawable="@color/azul"
+                        android:imeOptions="actionNext" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDireccionEntrega"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:hint="Dirección de entrega"
+                    android:textColorHint="@color/azul"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:boxStrokeColor="@color/azul"
+                    app:boxStrokeWidth="1dp"
+                    app:boxCornerRadiusBottomEnd="20dp"
+                    app:boxCornerRadiusBottomStart="20dp"
+                    app:boxCornerRadiusTopEnd="20dp"
+                    app:boxCornerRadiusTopStart="20dp"
+                    app:hintTextColor="@color/azul"
+                    app:helperText=" "
+                    app:startIconDrawable="@drawable/ic_location"
+                    app:startIconTint="@color/azul"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietDireccionEntrega"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPostalAddress"
+                        android:textColor="@color/azul"
+                        android:textCursorDrawable="@color/azul"
+                        android:imeOptions="actionNext"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RadioGroup
+                    android:id="@+id/rgSobrePaquete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rbtSobre"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sobre"
+                        android:textSize="15sp"
+                        android:textColor="@color/azul"
+                        android:fontFamily="sans-serif"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/rbtPaquete"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Paquete"
+                        android:textSize="15sp"
+                        android:textColor="@color/azul"
+                        android:fontFamily="sans-serif"
+                        android:checked="true"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clayPaquete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp" >
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/ic_caja"
+                        android:layout_marginTop="60dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAlto"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:hint="Alto"
+                        android:textColorHint="@color/azul"
+                        android:layout_marginStart="10dp"
+                        app:boxCornerRadiusBottomEnd="20dp"
+                        app:boxCornerRadiusBottomStart="20dp"
+                        app:boxCornerRadiusTopEnd="20dp"
+                        app:boxCornerRadiusTopStart="20dp"
+                        app:boxStrokeColor="@color/azul"
+                        app:boxStrokeWidth="1dp"
+                        app:endIconDrawable="@drawable/ic_cm"
+                        app:endIconMode="custom"
+                        app:endIconTint="@color/azul"
+                        app:helperText=" "
+                        app:hintTextColor="@color/azul"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tietAlto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="30"
+                            android:textColor="@color/azul"
+                            android:textCursorDrawable="@color/azul"
+                            android:editable="false" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAncho"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:hint="Ancho"
+                        android:textColorHint="@color/azul"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:boxStrokeColor="@color/azul"
+                        app:boxStrokeWidth="1dp"
+                        app:boxCornerRadiusBottomEnd="20dp"
+                        app:boxCornerRadiusBottomStart="20dp"
+                        app:boxCornerRadiusTopEnd="20dp"
+                        app:boxCornerRadiusTopStart="20dp"
+                        app:hintTextColor="@color/azul"
+                        app:helperText=" "
+                        app:endIconDrawable="@drawable/ic_cm"
+                        app:endIconTint="@color/azul"
+                        app:endIconMode="custom"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tietAncho"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="9"
+                            android:textColor="@color/azul"
+                            android:textCursorDrawable="@color/azul"
+                            android:imeOptions="actionNext"
+                            android:editable="false" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilLargo"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:hint="Largo"
+                        android:textColorHint="@color/azul"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:boxStrokeColor="@color/azul"
+                        app:boxStrokeWidth="1dp"
+                        app:boxCornerRadiusBottomEnd="20dp"
+                        app:boxCornerRadiusBottomStart="20dp"
+                        app:boxCornerRadiusTopEnd="20dp"
+                        app:boxCornerRadiusTopStart="20dp"
+                        app:hintTextColor="@color/azul"
+                        app:helperText=" "
+                        app:endIconDrawable="@drawable/ic_cm"
+                        app:endIconTint="@color/azul"
+                        app:endIconMode="custom"
+                        app:layout_constraintTop_toBottomOf="@id/imageView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tietLargo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="50"
+                            android:textColor="@color/azul"
+                            android:textCursorDrawable="@color/azul"
+                            android:imeOptions="actionNext" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPeso"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:hint="Peso"
+                        android:textColorHint="@color/azul"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:boxStrokeColor="@color/azul"
+                        app:boxStrokeWidth="1dp"
+                        app:boxCornerRadiusBottomEnd="20dp"
+                        app:boxCornerRadiusBottomStart="20dp"
+                        app:boxCornerRadiusTopEnd="20dp"
+                        app:boxCornerRadiusTopStart="20dp"
+                        app:hintTextColor="@color/azul"
+                        app:helperText=" "
+                        app:endIconDrawable="@drawable/ic_kg"
+                        app:endIconTint="@color/azul"
+                        app:endIconMode="custom"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imageView"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tietPeso"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="50"
+                            android:textColor="@color/azul"
+                            android:textCursorDrawable="@color/azul"
+                            android:imeOptions="actionNext" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/btnRealizarSolicitud"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/boton_naranja"
+                    android:textColor="@color/blanco"
+                    android:text="Realizar solicitud"
+                    android:textAllCaps="false"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="15sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/flayCargando"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9010131a"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/pbCargando"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/naranja" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvLatitudRecojo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLongitudRecojo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLatitudEntrega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLongitudEntrega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

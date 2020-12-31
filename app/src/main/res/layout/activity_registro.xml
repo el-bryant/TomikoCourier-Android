@@ -1,296 +1,379 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistroActivity"
-    android:background="@color/azul"
     android:orientation="vertical"
+    android:background="@color/blanco"
+    android:theme="@style/Material"
     android:fitsSystemWindows="true" >
 
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:src="@drawable/logo_horizontal"
-        android:scaleType="fitEnd"
-        android:layout_marginEnd="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginBottom="20dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ECEFF3">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nuevo usuario"
-        android:textColor="@color/naranja"
-        android:textSize="25sp"
-        android:fontFamily="sans-serif-black"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:src="@drawable/imagotipo_horizontal"
+            android:scaleType="fitEnd"
+            android:tint="@color/naranja"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="20dp" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_vertical" >
+            android:text="Nuevo usuario"
+            android:textColor="@color/naranja"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp" />
 
-            <androidx.cardview.widget.CardView
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="30dp"
-                app:cardBackgroundColor="@color/blanco"
-                app:cardCornerRadius="25dp" >
+                android:orientation="vertical" >
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="30dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginBottom="30dp" >
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="@color/blanco" >
 
-                    <FrameLayout
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="15dp" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:orientation="vertical" >
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/civFotoPerfil"
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilDni"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/circulo_naranja" />
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:hint="DNI"
+                            android:textColorHint="@color/azul"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:boxStrokeColor="@color/azul"
+                            app:boxStrokeWidth="1dp"
+                            app:boxCornerRadiusBottomEnd="20dp"
+                            app:boxCornerRadiusBottomStart="20dp"
+                            app:boxCornerRadiusTopEnd="20dp"
+                            app:boxCornerRadiusTopStart="20dp"
+                            app:hintTextColor="@color/azul"
+                            app:helperText=" "
+                            app:startIconDrawable="@drawable/ic_dni"
+                            app:startIconTint="@color/azul"
+                            app:counterMaxLength="8"
+                            app:counterEnabled="true"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
 
-                        <ImageView
-                            android:id="@+id/ivCargarFoto"
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tietDni"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="8"
+                                android:textColor="@color/azul"
+                                android:textCursorDrawable="@color/azul"
+                                android:imeOptions="actionNext" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilApellidos"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/ic_camera"
-                            android:tint="@color/blanco"
-                            android:padding="20dp" />
-
-                    </FrameLayout>
-
-                    <TextView
-                        android:id="@+id/tvCargarFoto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Cargar foto"
-                        android:textColor="@color/naranja"
-                        android:fontFamily="sans-serif-light"
-                        android:textSize="15sp"
-                        android:layout_marginBottom="20dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="12"
-                        android:gravity="center"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:text="DNI:"
-                            android:textColor="@color/azul"
-                            android:textSize="18sp"
-                            android:fontFamily="sans-serif-medium" />
-
-                        <EditText
-                            android:id="@+id/etDni"
-                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="8"
-                            android:textColor="@color/azul"
-                            android:fontFamily="sans-serif-condensed"
-                            android:textSize="15sp"
-                            android:maxLength="8"
-                            android:inputType="number" />
+                            android:hint="Apellidos"
+                            android:textColorHint="@color/azul"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:boxStrokeColor="@color/azul"
+                            app:boxStrokeWidth="1dp"
+                            app:boxCornerRadiusBottomEnd="20dp"
+                            app:boxCornerRadiusBottomStart="20dp"
+                            app:boxCornerRadiusTopEnd="20dp"
+                            app:boxCornerRadiusTopStart="20dp"
+                            app:hintTextColor="@color/azul"
+                            app:helperText=" "
+                            app:startIconDrawable="@drawable/ic_perfil"
+                            app:startIconTint="@color/azul"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tietApellidos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:maxLength="30"
+                                android:textColor="@color/azul"
+                                android:textCursorDrawable="@color/azul"
+                                android:imeOptions="actionNext"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilNombres"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:hint="Nombres"
+                            android:textColorHint="@color/azul"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:boxStrokeColor="@color/azul"
+                            app:boxStrokeWidth="1dp"
+                            app:boxCornerRadiusBottomEnd="20dp"
+                            app:boxCornerRadiusBottomStart="20dp"
+                            app:boxCornerRadiusTopEnd="20dp"
+                            app:boxCornerRadiusTopStart="20dp"
+                            app:hintTextColor="@color/azul"
+                            app:helperText=" "
+                            app:startIconDrawable="@drawable/ic_perfil"
+                            app:startIconTint="@color/azul"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tietNombres"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:maxLength="30"
+                                android:textColor="@color/azul"
+                                android:textCursorDrawable="@color/azul"
+                                android:imeOptions="actionNext" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilCelular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:hint="Celular"
+                            android:textColorHint="@color/azul"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:boxStrokeColor="@color/azul"
+                            app:boxStrokeWidth="1dp"
+                            app:boxCornerRadiusBottomEnd="20dp"
+                            app:boxCornerRadiusBottomStart="20dp"
+                            app:boxCornerRadiusTopEnd="20dp"
+                            app:boxCornerRadiusTopStart="20dp"
+                            app:hintTextColor="@color/azul"
+                            app:helperText=" "
+                            app:startIconDrawable="@drawable/ic_celular"
+                            app:startIconTint="@color/azul"
+                            app:counterMaxLength="9"
+                            app:counterEnabled="true"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tietCelular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="phone"
+                                android:maxLength="9"
+                                android:textColor="@color/naranja"
+                                android:textCursorDrawable="@color/naranja"
+                                android:imeOptions="actionNext" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilCorreo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:hint="Correo"
+                            android:textColorHint="@color/azul"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:boxStrokeColor="@color/azul"
+                            app:boxStrokeWidth="1dp"
+                            app:boxCornerRadiusBottomEnd="20dp"
+                            app:boxCornerRadiusBottomStart="20dp"
+                            app:boxCornerRadiusTopEnd="20dp"
+                            app:boxCornerRadiusTopStart="20dp"
+                            app:hintTextColor="@color/azul"
+                            app:helperText=" "
+                            app:startIconDrawable="@drawable/ic_correo"
+                            app:startIconTint="@color/azul"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tietCorreo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="50"
+                                android:textColor="@color/naranja"
+                                android:textCursorDrawable="@color/naranja"
+                                android:imeOptions="actionNext" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilUsuario"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:hint="Usuario"
+                            android:textColorHint="@color/azul"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:boxStrokeColor="@color/azul"
+                            app:boxStrokeWidth="1dp"
+                            app:boxCornerRadiusBottomEnd="20dp"
+                            app:boxCornerRadiusBottomStart="20dp"
+                            app:boxCornerRadiusTopEnd="20dp"
+                            app:boxCornerRadiusTopStart="20dp"
+                            app:hintTextColor="@color/azul"
+                            app:helperText=" "
+                            app:startIconDrawable="@drawable/ic_candado"
+                            app:startIconTint="@color/azul"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/titeUsuario"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:maxLength="50"
+                                android:textColor="@color/azul"
+                                android:textCursorDrawable="@color/azul"
+                                android:imeOptions="actionNext" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilClave"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:hint="Contraseña"
+                            android:textColorHint="@color/azul"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:boxStrokeColor="@color/azul"
+                            app:boxStrokeWidth="1dp"
+                            app:boxCornerRadiusBottomEnd="20dp"
+                            app:boxCornerRadiusBottomStart="20dp"
+                            app:boxCornerRadiusTopEnd="20dp"
+                            app:boxCornerRadiusTopStart="20dp"
+                            app:hintTextColor="@color/azul"
+                            app:helperText=" "
+                            app:startIconDrawable="@drawable/ic_candado"
+                            app:startIconTint="@color/azul"
+                            app:passwordToggleDrawable="@drawable/show_password_selector"
+                            app:passwordToggleEnabled="true"
+                            app:passwordToggleTint="@color/azul"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tietClave"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPassword"
+                                android:maxLength="50"
+                                android:textColor="@color/azul"
+                                android:textCursorDrawable="@color/azul"
+                                android:imeOptions="actionNext" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilDireccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:hint="Dirección"
+                            android:textColorHint="@color/azul"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:boxStrokeColor="@color/azul"
+                            app:boxStrokeWidth="1dp"
+                            app:boxCornerRadiusBottomEnd="20dp"
+                            app:boxCornerRadiusBottomStart="20dp"
+                            app:boxCornerRadiusTopEnd="20dp"
+                            app:boxCornerRadiusTopStart="20dp"
+                            app:hintTextColor="@color/azul"
+                            app:helperText=" "
+                            app:startIconDrawable="@drawable/ic_home"
+                            app:startIconTint="@color/azul"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tietDireccion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textLongMessage"
+                                android:maxLength="200"
+                                android:textColor="@color/azul"
+                                android:textCursorDrawable="@color/azul"
+                                android:imeOptions="actionDone" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="12"
-                        android:gravity="center"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp">
+                </androidx.cardview.widget.CardView>
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:text="Apellidos:"
-                            android:textColor="@color/azul"
-                            android:textSize="18sp"
-                            android:fontFamily="sans-serif-medium" />
+                <Button
+                    android:id="@+id/btnRegistrarme"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/boton_naranja"
+                    android:text="Registrarme"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textColor="@color/blanco"
+                    android:enabled="false"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginEnd="90dp"
+                    android:layout_marginBottom="50dp" />
 
-                        <EditText
-                            android:id="@+id/etApellidos"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="8"
-                            android:textColor="@color/azul"
-                            android:fontFamily="sans-serif-condensed"
-                            android:textSize="15sp"
-                            android:inputType="textPersonName" />
+            </LinearLayout>
 
-                    </LinearLayout>
+        </ScrollView>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="12"
-                        android:gravity="center"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp">
+    </LinearLayout>
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:text="Nombres:"
-                            android:textColor="@color/azul"
-                            android:textSize="18sp"
-                            android:fontFamily="sans-serif-medium" />
+    <FrameLayout
+        android:id="@+id/flayCargando"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9010131a"
+        android:visibility="gone" >
 
-                        <EditText
-                            android:id="@+id/etNombres"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="8"
-                            android:textColor="@color/azul"
-                            android:fontFamily="sans-serif-condensed"
-                            android:textSize="15sp"
-                            android:inputType="textPersonName" />
+        <ProgressBar
+            android:id="@+id/pbCargando"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/naranja" />
 
-                    </LinearLayout>
+    </FrameLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="12"
-                        android:gravity="center"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:text="Celular:"
-                            android:textColor="@color/azul"
-                            android:textSize="18sp"
-                            android:fontFamily="sans-serif-medium" />
-
-                        <EditText
-                            android:id="@+id/etCelular"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="8"
-                            android:textColor="@color/azul"
-                            android:fontFamily="sans-serif-condensed"
-                            android:textSize="15sp"
-                            android:maxLength="9"
-                            android:inputType="phone" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="12"
-                        android:gravity="center"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:text="Correo:"
-                            android:textColor="@color/azul"
-                            android:textSize="18sp"
-                            android:fontFamily="sans-serif-medium" />
-
-                        <EditText
-                            android:id="@+id/etCorreo"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="8"
-                            android:textColor="@color/azul"
-                            android:fontFamily="sans-serif-condensed"
-                            android:textSize="15sp"
-                            android:inputType="textEmailAddress" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="12"
-                        android:gravity="center"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:text="Dirección:"
-                            android:textColor="@color/azul"
-                            android:textSize="18sp"
-                            android:fontFamily="sans-serif-medium" />
-
-                        <EditText
-                            android:id="@+id/etDireccion"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="8"
-                            android:textColor="@color/azul"
-                            android:fontFamily="sans-serif-condensed"
-                            android:textSize="15sp"
-                            android:inputType="text" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <Button
-                android:id="@+id/btnRegistrar"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/boton_naranja"
-                android:text="Guardar"
-                android:textAllCaps="false"
-                android:textColor="@color/blanco"
-                android:fontFamily="sans-serif-black"
-                android:textSize="15sp"
-                android:layout_marginStart="100dp"
-                android:layout_marginEnd="100dp" />
-
-        </LinearLayout>
-
-    </ScrollView>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

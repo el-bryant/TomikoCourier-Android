@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "889156153033",
+    "firebase_url": "https://tomikocourier-9410c.firebaseio.com",
+    "project_id": "tomikocourier-9410c",
+    "storage_bucket": "tomikocourier-9410c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889156153033:android:a6e5caf1b3b7a3817b6718",
+        "android_client_info": {
+          "package_name": "core.tomiko"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889156153033-qehevl0g2bu687dkkp5d4vdk5umokr8c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "core.tomiko",
+            "certificate_hash": "6cc7aeb9c231ba4a51709b141434cf15c3627044"
+          }
+        },
+        {
+          "client_id": "889156153033-2npb46fi7a2r30ccjo07ea1l3vgeksjk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQcZTFSglb5Y1mT0wLHga7AJ9tWYm5t1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889156153033-2npb46fi7a2r30ccjo07ea1l3vgeksjk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

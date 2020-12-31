@@ -1,0 +1,3 @@
+Key store password: tomiko123456
+Key alias: TomikoCourier
+Key password: tomiko123456
